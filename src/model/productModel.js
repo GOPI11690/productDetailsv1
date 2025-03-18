@@ -6,7 +6,7 @@ const productSchema=new mongoose.Schema({
         maxLength:50,
     },
     price: {
-        type:String,
+        type:Number,
         required: true,
     },
     description: {
@@ -14,9 +14,12 @@ const productSchema=new mongoose.Schema({
         required:true,
         maxLength:125
     },
-    category: String,
-    rating: {
+    category: {
         type:String,
+        maxLength:50,
+    },
+    rating: {
+        type:Number,
     },   
 })
 
